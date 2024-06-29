@@ -25,6 +25,6 @@ Una publicación digital de entretenimiento enfocada en películas y series nece
 
 **Puntos clave**
 
-- Series y películas: esta es una base de datos gigante, pero que se puede obtener de recursos gratuitos como TMDB y mantenrse actualizada por medio de su API. 
-- Búsquedas: guarda todas las encuestas completadas por lo usuarios, para luego poder usar esta información para conocer, principalmente, los géneros y plataformas más buscados por los usuarios.
-- Actividad: además de lo que buscan, es importante saber sobre qué títulos de los resultados ingresaron para obtener más información.
+- **Series y películas:** esta es una tabla gigante, pero que se puede obtener de recursos gratuitos como TMDB y mantenrse actualizada por medio de su API. 
+- **Búsquedas:** guarda todas las encuestas completadas por lo usuarios, para luego poder usar esta información para conocer, principalmente, los géneros y plataformas más buscados por los usuarios.
+- **Actividad:** además de lo que buscan, es importante saber sobre qué títulos de los resultados ingresaron para obtener más información.
