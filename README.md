@@ -39,7 +39,7 @@ Esto nos permitirá obtener:
 
 ### Diagrama de entidad de relación
 
-*titulos*
+**titulos**
 Contiene todas las series y películas con su información básica.
 - titulo_id (PK) INT UNIQUE INDEX
 - nombre VARCHAR
@@ -48,61 +48,61 @@ Contiene todas las series y películas con su información básica.
 - fecha DATE
 - puntaje DECIMAL
 
-+generos*
+**generos**
 Contiene el registro de géneros.
 - genero_id (PK) INT UNIQUE INDEX
 - nombre VARCHAR
 
-*generos_en_titulos*
+**generos_en_titulos**
 Contiene la relación de géneros con títulos.
 - genero_en_id (PK) INT PK UNIQUE INDEX
 - genero_id (FK) INT
 - titulo_id (FK) INT
 
-*actores*
+**actores**
 Contiene el registro de actores.
 - actor_id (PK) INT PK UNIQUE INDEX
 - nombre VARCHAR
 - foto_url VARCHAR
 
-+actores_en_titulos*
+**actores_en_titulos**
 Contiene la relación de actores que formaron parte de las series y películas con el papel que interpretaron.
 - actor_en_id (PK) INT PK UNIQUE INDEX
 - actor_id (FK) INT
 - titulo_id (FK) INT
 - papel VARCHAR
 
-*directores*
+**directores**
 Contiene el registro de direcetores.
 - director_id (PK) INT PK UNIQUE INDEX
 - nombre VARCHAR
 - foto_url VARCHAR
 
-*directores_en_titulos*
+**directores_en_titulos**
 Contiene la relación de directors y títulos.
 - director_en_id (PK) INT PK UNIQUE INDEX
 - director_id (FK) INT
 - titulo_id (FK) INT
 
-*plataformas*
+**plataformas**
 Contiene el registro de plataformas de streaming.
 - plataforma_id (PK) INT PK UNIQUE INDEX
 - nombre VARCHAR
 - logo_url VARCHAR
 
-*plataformas_en_titulos*
+**plataformas_en_titulos**
 Contiene la relación de plataformas en las que se pueden ver los títulos.
 - plataforma_en_id (PK) INT PK UNIQUE INDEX
 - plataforma_id (FK) INT
 - titulo_id (FK) INT
 
-*antiguedad*
+**antiguedad**
 Contiene un registro de las antigüedades posibles que se pueden buscar.
 - antiguedad_id (PK) INT PK UNIQUE INDEX
 - descripcion VARCHAR
 - how_old INT
 
-*busquedas*
+**busquedas**
 Guardar las opciones seleccionadas por los usuarios en cada búsqueda.
 - busqueda_id (PK) INT PK UNIQUE INDEX
 - genero_id (FK) INT
@@ -110,7 +110,7 @@ Guardar las opciones seleccionadas por los usuarios en cada búsqueda.
 - antiguedad_id (FK) INT
 - fecha TIMESTAMP
 
-*actividad*
+**actividad**
 Lleva un registro de la actividad que realiza el usuario para luego ponderarla, actualmente guarda solo las visitas a los títulos.
 - actividad_id (PK) INT PK UNIQUE INDEX
 - titulo_id (FK) INT
