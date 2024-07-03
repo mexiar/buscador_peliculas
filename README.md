@@ -40,7 +40,7 @@ Esto nos permitirá obtener:
 ### Tablas
 El principal desafío es usar trablas intermedias en lugar de strings para guardar información de los títulos. Por ejemplo, sería muy sencillo agregar un campo "generos" a titulos y guardar los genero_id separados por coma (2,5,9). En su lugar se usa una tabla intermedia para géneros, actores, directores y plataformas.
 
-1. **titulos**<br/>
+**titulos**<br/>
 Contiene todas las series y películas con su información básica.
 - titulo_id (PK)
 - nombre
@@ -49,7 +49,7 @@ Contiene todas las series y películas con su información básica.
 - fecha
 - puntaje
 
-2. **generos**<br/>
+**generos**<br/>
 Contiene el registro de géneros.
 - genero_id (PK)
 - nombre
