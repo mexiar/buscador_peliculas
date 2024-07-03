@@ -115,7 +115,7 @@ Guardar las opciones seleccionadas por los usuarios en cada búsqueda.
 Lleva un registro de la actividad que realiza el usuario para luego ponderarla, actualmente guarda solo las visitas a los títulos.
 - actividad_id (PK)
 - titulo_id (FK)
+- tipo
 
 ### DER de workbench
-![](https://github.com/mexiar/buscador_peliculas/blob/main/DER_workbench.jpg)
-- tipo 
+![](https://github.com/mexiar/buscador_peliculas/blob/main/DER_workbench.png)
