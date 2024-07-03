@@ -49,70 +49,59 @@ Contiene todas las series y películas con su información básica.
 - fecha
 - puntaje
 
-**generos**<br/>
-Contiene el registro de géneros.
+**generos**: Contiene el registro de géneros.
 - genero_id (PK)
 - nombre
 
-**generos_en_titulos**<br/>
-Contiene la relación de géneros con títulos.
+**generos_en_titulos**: Contiene la relación de géneros con títulos.
 - genero_en_id (PK)
 - genero_id (FK)
 - titulo_id (FK)
 
-**actores**<br/>
-Contiene el registro de actores.
+**actores**: Contiene el registro de actores.
 - actor_id (PK)
 - nombre
 - foto_url
 
-**actores_en_titulos**<br/>
-Contiene la relación de actores que formaron parte de las series y películas con el papel que interpretaron.
+**actores_en_titulos**: Contiene la relación de actores que formaron parte de las series y películas con el papel que interpretaron.
 - actor_en_id (PK)
 - actor_id (FK)
 - titulo_id (FK)
 - papel
 
-**directores**<br/>
-Contiene el registro de direcetores.
+**directores**: Contiene el registro de direcetores.
 - director_id (PK)
 - nombre
 - foto_url
 
-**directores_en_titulos**<br/>
-Contiene la relación de directors y títulos.
+**directores_en_titulos**: Contiene la relación de directors y títulos.
 - director_en_id (PK)
 - director_id (FK)
 - titulo_id (FK)
 
-**plataformas**<br/>
-Contiene el registro de plataformas de streaming.
+**plataformas**: Contiene el registro de plataformas de streaming.
 - plataforma_id (PK)
 - nombre
 - logo_url
 
-**plataformas_en_titulos**<br/>
-Contiene la relación de plataformas en las que se pueden ver los títulos.
+**plataformas_en_titulos**: Contiene la relación de plataformas en las que se pueden ver los títulos.
 - plataforma_en_id (PK)
 - plataforma_id (FK)
 - titulo_id (FK)
 
-**antiguedad**<br/>
-Contiene un registro de las antigüedades posibles que se pueden buscar.
+**antiguedad**: Contiene un registro de las antigüedades posibles que se pueden buscar.
 - antiguedad_id (PK)
 - descripcion
 - how_old
 
-**busquedas**<br/>
-Guardar las opciones seleccionadas por los usuarios en cada búsqueda.
+**busquedas**: Guardar las opciones seleccionadas por los usuarios en cada búsqueda.
 - busqueda_id (PK)
 - genero_id (FK)
 - plataforma_id (FK)
 - antiguedad_id (FK)
 - fecha
 
-**actividad**<br/>
-Lleva un registro de la actividad que realiza el usuario para luego ponderarla, actualmente guarda solo las visitas a los títulos.
+**actividad**: Lleva un registro de la actividad que realiza el usuario para luego ponderarla, actualmente guarda solo las visitas a los títulos.
 - actividad_id (PK)
 - titulo_id (FK)
 - tipo
