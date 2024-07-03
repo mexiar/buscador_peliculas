@@ -117,8 +117,11 @@ Lleva un registro de la actividad que realiza el usuario para luego ponderarla, 
 - titulo_id (FK)
 - tipo
 
-### DER
+### DER manual
+![](https://github.com/mexiar/buscador_peliculas/blob/main/DER_manual.jpg)
 
+### DER
+![](https://github.com/mexiar/buscador_peliculas/blob/main/DER_original.jpg)
 
 ### DER de workbench
 ![](https://github.com/mexiar/buscador_peliculas/blob/main/DER_workbench.png)
