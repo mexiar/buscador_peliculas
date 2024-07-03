@@ -40,7 +40,7 @@ Esto nos permitirá obtener:
 ### Tablas
 El principal desafío es usar trablas intermedias en lugar de strings para guardar información de los títulos. Por ejemplo, sería muy sencillo agregar un campo "generos" a titulos y guardar los genero_id separados por coma (2,5,9). En su lugar se usa una tabla intermedia para géneros, actores, directores y plataformas.
 
-**titulos**<br/>
+1. **titulos**<br/>
 Contiene todas las series y películas con su información básica.
 - titulo_id (PK)
 - nombre
@@ -49,7 +49,7 @@ Contiene todas las series y películas con su información básica.
 - fecha
 - puntaje
 
-**generos**<br/>
+2. **generos**<br/>
 Contiene el registro de géneros.
 - genero_id (PK)
 - nombre
@@ -116,6 +116,9 @@ Lleva un registro de la actividad que realiza el usuario para luego ponderarla, 
 - actividad_id (PK)
 - titulo_id (FK)
 - tipo
+
+### DER
+
 
 ### DER de workbench
 ![](https://github.com/mexiar/buscador_peliculas/blob/main/DER_workbench.png)
