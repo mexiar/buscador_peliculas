@@ -37,81 +37,82 @@ Esto nos permitirá obtener:
 
 <br/>
 
-### Diagrama de entidad de relación
+### Tablas
+El principal desafío es usar trablas intermedias en lugar de strings para guardar información de los títulos. Por ejemplo, sería muy sencillo agregar un campo "generos" a titulos y guardar los genero_id separados por coma (2,5,9). En su lugar se usa una tabla intermedia para géneros, actores, directores y plataformas.
 
 **titulos**<br/>
 Contiene todas las series y películas con su información básica.
-- titulo_id (PK) INT UNIQUE INDEX
-- nombre VARCHAR
-- poster_url VARCHAR
-- sinopsis VARCHAR
-- fecha DATE
-- puntaje DECIMAL
+- titulo_id (PK)
+- nombre
+- poster_url
+- sinopsis
+- fecha
+- puntaje
 
 **generos**<br/>
 Contiene el registro de géneros.
-- genero_id (PK) INT UNIQUE INDEX
-- nombre VARCHAR
+- genero_id (PK)
+- nombre
 
 **generos_en_titulos**<br/>
 Contiene la relación de géneros con títulos.
-- genero_en_id (PK) INT PK UNIQUE INDEX
-- genero_id (FK) INT
-- titulo_id (FK) INT
+- genero_en_id (PK)
+- genero_id (FK)
+- titulo_id (FK)
 
 **actores**<br/>
 Contiene el registro de actores.
-- actor_id (PK) INT PK UNIQUE INDEX
-- nombre VARCHAR
-- foto_url VARCHAR
+- actor_id (PK)
+- nombre
+- foto_url
 
 **actores_en_titulos**<br/>
 Contiene la relación de actores que formaron parte de las series y películas con el papel que interpretaron.
-- actor_en_id (PK) INT PK UNIQUE INDEX
-- actor_id (FK) INT
-- titulo_id (FK) INT
-- papel VARCHAR
+- actor_en_id (PK)
+- actor_id (FK)
+- titulo_id (FK)
+- papel
 
 **directores**<br/>
 Contiene el registro de direcetores.
-- director_id (PK) INT PK UNIQUE INDEX
-- nombre VARCHAR
-- foto_url VARCHAR
+- director_id (PK)
+- nombre
+- foto_url
 
 **directores_en_titulos**<br/>
 Contiene la relación de directors y títulos.
-- director_en_id (PK) INT PK UNIQUE INDEX
-- director_id (FK) INT
-- titulo_id (FK) INT
+- director_en_id (PK)
+- director_id (FK)
+- titulo_id (FK)
 
 **plataformas**<br/>
 Contiene el registro de plataformas de streaming.
-- plataforma_id (PK) INT PK UNIQUE INDEX
-- nombre VARCHAR
-- logo_url VARCHAR
+- plataforma_id (PK)
+- nombre
+- logo_url
 
 **plataformas_en_titulos**<br/>
 Contiene la relación de plataformas en las que se pueden ver los títulos.
-- plataforma_en_id (PK) INT PK UNIQUE INDEX
-- plataforma_id (FK) INT
-- titulo_id (FK) INT
+- plataforma_en_id (PK)
+- plataforma_id (FK)
+- titulo_id (FK)
 
 **antiguedad**<br/>
 Contiene un registro de las antigüedades posibles que se pueden buscar.
-- antiguedad_id (PK) INT PK UNIQUE INDEX
-- descripcion VARCHAR
-- how_old INT
+- antiguedad_id (PK)
+- descripcion
+- how_old
 
 **busquedas**<br/>
 Guardar las opciones seleccionadas por los usuarios en cada búsqueda.
-- busqueda_id (PK) INT PK UNIQUE INDEX
-- genero_id (FK) INT
-- plataforma_id (FK) INT
-- antiguedad_id (FK) INT
-- fecha TIMESTAMP
+- busqueda_id (PK)
+- genero_id (FK)
+- plataforma_id (FK)
+- antiguedad_id (FK)
+- fecha
 
 **actividad**<br/>
 Lleva un registro de la actividad que realiza el usuario para luego ponderarla, actualmente guarda solo las visitas a los títulos.
-- actividad_id (PK) INT PK UNIQUE INDEX
-- titulo_id (FK) INT
-- tipo VARCHAR
+- actividad_id (PK)
+- titulo_id (FK)
+- tipo 
